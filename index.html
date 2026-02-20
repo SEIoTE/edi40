@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>antrunner Meetup #100 — Mobile App Development: Review, Current State, Trends</title>
-  <meta name="description" content="antrunner Meetup #100 — Review, current state and trends in mobile app development. Feb 27, 2026. Online via Zoom." />
+  <title>100th Online Community Event — Mobile App Development</title>
+  <meta name="description" content="100th Online Community Event on Mobile App Development. Feb 27, 2026. Online via Zoom." />
 
   <style>
     :root{
-      --bg:#f6f8fb;
+      --bg:#ffffff;
       --panel:#ffffff;
-      --text:#1f2937;
+      --text:#111827;
       --muted:#6b7280;
-      --accent:#2563eb;
-      --border:rgba(15,23,42,.12);
+      --border:rgba(15,23,42,.14);
     }
 
     *{box-sizing:border-box}
@@ -21,276 +20,164 @@
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      background:linear-gradient(180deg, #f9fafb, #eef2f7);
+      background:var(--bg);
       color:var(--text);
       line-height:1.55;
     }
 
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-
     .container{
-      max-width:980px;
+      max-width:860px;
       margin:0 auto;
-      padding:24px;
+      padding:20px;
     }
 
-    .header{
-      padding:28px 24px;
+    header{
       border:1px solid var(--border);
-      background:rgba(255,255,255,.85);
-      border-radius:18px;
+      padding:18px;
+      background:var(--panel);
     }
 
-    .badge{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding:6px 12px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      color:var(--muted);
-      font-size:14px;
-      background:#f3f4f6;
-    }
-
-    .title{
-      margin:14px 0 8px 0;
-      font-size:34px;
-      line-height:1.15;
+    h1{
+      margin:0 0 6px 0;
+      font-size:26px;
+      line-height:1.2;
+      font-weight:700;
     }
 
     .subtitle{
       margin:0;
       color:var(--muted);
-      font-size:18px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      margin-top:18px;
-    }
-
-    @media (max-width: 860px){
-      .grid{grid-template-columns:1fr}
-    }
-
-    .card{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.95);
-      border-radius:18px;
-      padding:18px;
-    }
-
-    .card h2{
-      margin:0 0 10px 0;
-      font-size:18px;
-    }
-
-    .muted{color:var(--muted)}
-
-    .list{
-      margin:10px 0 0 18px;
-    }
-
-    .list li{
-      margin:6px 0;
-    }
-
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#f9fafb;
-      color:var(--text);
-      font-weight:600;
-    }
-
-    .btn.primary{
-      background:#e8efff;
-      border-color:#c7d7fe;
-      color:#1e3a8a;
-    }
-
-    .kvs{
-      display:grid;
-      gap:10px;
-      margin-top:12px;
-    }
-
-    .kv{
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:12px;
-      background:#f9fafb;
-    }
-
-    .kv .k{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--muted);
-    }
-
-    .kv .v{
-      margin-top:4px;
       font-size:15px;
     }
 
-    .tz-list{
-      margin-top:6px;
-      font-size:14px;
-      color:var(--muted);
-      line-height:1.45;
+    main{
+      margin-top:16px;
+      border:1px solid var(--border);
+      padding:18px;
+      background:var(--panel);
     }
 
-    .speaker{
-      display:grid;
-      gap:8px;
-      border:1px dashed var(--border);
-      border-radius:16px;
-      padding:14px;
-      background:#f9fafb;
-      margin-top:10px;
-    }
-
-    .speaker .name{
+    h2{
+      margin:0 0 10px 0;
+      font-size:16px;
       font-weight:700;
     }
 
-    .footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:13px;
-      padding:10px 2px 2px 2px;
+    p{
+      margin:0 0 12px 0;
     }
 
-    code.inline{
-      padding:2px 6px;
-      border-radius:8px;
-      background:#f9fafb;
-      border:1px solid var(--border);
-      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-      font-size:12.5px;
-      color:var(--text);
+    ul{
+      margin:8px 0 14px 18px;
+      padding:0;
     }
+
+    li{ margin:6px 0; }
+
+    .details{
+      margin-top:14px;
+      border-top:1px solid var(--border);
+      padding-top:14px;
+    }
+
+    .row{
+      display:flex;
+      gap:10px;
+      padding:6px 0;
+      border-bottom:1px solid rgba(15,23,42,.08);
+    }
+    .row:last-child{ border-bottom:none; }
+
+    .k{
+      width:140px;
+      color:var(--muted);
+      font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .v{
+      font-size:14px;
+      word-break:break-word;
+    }
+
+    footer{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      padding:2px;
+    }
+
+    a{ color:inherit; }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
-      <div class="badge">
-        <span>antrunner</span>
-        <span class="muted">Meetup #100</span>
-      </div>
-
-      <h1 class="title">Review, Current State, and Trends in Mobile App Development</h1>
-      <p class="subtitle">
-        A milestone meetup to look back, take stock of today’s best practices, and discuss where mobile development is headed.
-      </p>
-
-      <div class="ctaRow">
-        <a class="btn primary" href="https://www.meetup.com/antrunner/" target="_blank" rel="noopener noreferrer">
-          Meetup Page
-        </a>
-        <a class="btn" href="https://us02web.zoom.us/j/2142154989" target="_blank" rel="noopener noreferrer">
-          Join on Zoom
-        </a>
-      </div>
+    <header>
+      <h1>100th Online Community Event on Mobile App Development</h1>
+      <p class="subtitle">Review, Current State, and Trends in Mobile App Development</p>
     </header>
 
-    <main class="grid">
-      <section class="card">
-        <h2>Theme &amp; agenda</h2>
-        <p class="muted">
-          We will keep it practical: what still works, what changed, and what is worth watching in 2026.
-        </p>
+    <main>
+      <h2>Theme &amp; Agenda</h2>
+      <p style="color:#6b7280;">
+        We will keep it practical: what still works, what changed, and what is worth watching in 2026.
+      </p>
 
-        <ul class="list">
-          <li>State of the art: <strong>Android</strong>, <strong>iOS</strong>, and cross platform in real teams</li>
-          <li>Architecture patterns that hold up over time</li>
-          <li>Tooling and pipelines: testing, CI/CD, release discipline</li>
-          <li>Security and privacy expectations</li>
-          <li>AI assisted development: what is real vs hype</li>
-          <li>Q&amp;A and open discussion</li>
-        </ul>
+      <ul>
+        <li>State of the art: Android, iOS, and cross-platform in real teams</li>
+        <li>Architecture patterns that hold up over time</li>
+        <li>Tooling and pipelines: testing, CI/CD, release discipline</li>
+        <li>Security and privacy expectations</li>
+        <li>AI-assisted development: what is real vs hype</li>
+        <li>Q&amp;A and open discussion</li>
+      </ul>
 
-        <h2 style="margin-top:16px;">Speakers</h2>
+      <p style="color:#6b7280; margin-bottom:0;">
+        The event website will be updated as the agenda is confirmed.
+      </p>
 
-        <div class="speaker">
-          <div class="name">Speaker 1 (placeholder)</div>
-          <div class="muted">Topic: (placeholder)</div>
-          <div class="muted">Bio: (placeholder)</div>
+      <div class="details">
+        <h2>Event Details</h2>
+
+        <div class="row">
+          <div class="k">Date</div>
+          <div class="v">February 27, 2026</div>
         </div>
 
-        <div class="speaker">
-          <div class="name">Speaker 2 (placeholder)</div>
-          <div class="muted">Topic: (placeholder)</div>
-          <div class="muted">Bio: (placeholder)</div>
+        <div class="row">
+          <div class="k">Time</div>
+          <div class="v">7:00 PM (GMT-7)</div>
         </div>
-      </section>
 
-      <aside class="card">
-        <h2>Event details</h2>
+        <div class="row">
+          <div class="k">Duration</div>
+          <div class="v">1 hour</div>
+        </div>
 
-        <div class="kvs">
-          <div class="kv">
-            <div class="k">Date</div>
-            <div class="v">February 27, 2026</div>
-          </div>
+        <div class="row">
+          <div class="k">Location</div>
+          <div class="v">Online (Zoom)</div>
+        </div>
 
-          <div class="kv">
-            <div class="k">Time</div>
-            <div class="v">Stuttgart time: 7:00 PM (GMT-7)</div>
-          </div>
-
-          <div class="kv">
-            <div class="k">Duration</div>
-            <div class="v">1 hour</div>
-          </div>
-
-          <div class="kv">
-            <div class="k">Location</div>
-            <div class="v">Online (Zoom)</div>
-          </div>
-
-          <div class="kv">
-            <div class="k">Zoom link</div>
-            <div class="v">
-              <a href="https://us02web.zoom.us/j/2142154989" target="_blank" rel="noopener noreferrer">
-                https://us02web.zoom.us/j/2142154989
-              </a>
-            </div>
-          </div>
-
-          <div class="kv">
-            <div class="k">Meeting ID</div>
-            <div class="v"><code class="inline">214 215 4989</code></div>
+        <div class="row">
+          <div class="k">Zoom link</div>
+          <div class="v">
+            <a href="https://us02web.zoom.us/j/2142154989" target="_blank" rel="noopener noreferrer">
+              https://us02web.zoom.us/j/2142154989
+            </a>
           </div>
         </div>
 
-        <div class="footer">
-          Tip: Join a few minutes early to verify audio and video.
+        <div class="row">
+          <div class="k">Meeting ID</div>
+          <div class="v">214 215 4989</div>
         </div>
-      </aside>
+      </div>
     </main>
 
-    <footer class="footer">
-      © antrunner — Meetup #100
+    <footer>
+      &copy; Community Event — #100
     </footer>
   </div>
 </body>
